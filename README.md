@@ -42,6 +42,8 @@ eece / computer
 - need to be able to detect any combination of keys together simultaneously
 - sw
   - rust ;)
+    - avr rust book: https://book.avr-rust.org/
+    - https://docs.rs/avrd/latest/avrd/atmega16u4/index.html
   - implements USB HID 1.11 + reading gpio inputs
 - elec
   - nice looking pcb
