@@ -53,3 +53,10 @@ eece / computer
     - *decision*
       - keyboard matrix. simpler is better.
   - is there a little led grid that I could have sitting somewhere flashing when keys are pressed?
+
+## Details
+
+keyboard matrix
+===============
+
+- layout?
