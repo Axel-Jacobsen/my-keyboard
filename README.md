@@ -2,7 +2,7 @@
 
 split keyboard, fun to make and fun to have
 
-## Requirements
+# Requirements
 
 microcontroller
 ===============
