@@ -4,18 +4,6 @@ split keyboard, fun to make and fun to have
 
 ## Requirements
 
-keys + key caps
-===============
-- 60%, 61 keys
-- mechanical keys
-  - pros: maybe sounds good
-  - cons: misclick frequently, more tiring to type, slow
-- flat keys
-  - pros: easier to press, faster to type
-  - cons: less cool?
-- *decision*
-  - search for flat keys and mechanical keys, should be able to make keybaords with either in the same way
-
 microcontroller
 ===============
 - connection type
@@ -32,6 +20,15 @@ microcontroller
     - as raw IC mounted on the PCB (more complicated, so don't do) or as a "hat" on a breakout board
       - https://www.microchip.com/en-us/product/atmega32u4
   - STM32F103 (powerful, bigger)
+- microcontroller -> pcb - how to connect?
+  - solder directly to pcb
+    - pros: fuckin sick, may be cheaper? maybe not
+    - cons: much more difficult to manufacture
+  - get breakout and solder the pins
+    - pros: much easier to deal with
+    - cons: less fkn tight
+  - *decision*
+    - do breakout for v1
 - *variables to minimize*
   - size
   - power consumption
@@ -56,9 +53,39 @@ eece / computer
       - keyboard matrix. simpler is better.
   - is there a little led grid that I could have sitting somewhere flashing when keys are pressed?
 
-## Details
-
-keyboard matrix
+keys + key caps
 ===============
 
-- layout?
+- A 61 key keyboard is common - a "60%" - but what do I need?
+  - want 60 keys minimum
+    - 26 for the letters of the alphabet
+    - 10 for decimal digits
+    - 1 for +
+    - 1 for -
+    - 1 for spacebar
+    - 3 for control, option, command
+    - 1 for escape (in caps lock position)
+    - 1 for tilde
+    - 1 for tab
+    - 1 for shift
+    - 1 for ;
+    - 1 for '
+    - 1 for delete
+    - 2 for < and >
+    - 2 for []
+    - 1 for ?
+    - 1 for \
+    - 4 for arrow keys
+    - 1 for special key 1
+  - with antoher 5,
+    - 1 for split spacebar
+    - 1 for another special key
+- key type
+  - mechanical keys
+    - pros: maybe sounds good
+    - cons: misclick frequently, more tiring to type, slow
+  - flat keys
+    - pros: easier to press, faster to type
+    - cons: less cool?
+  - *decision*
+    - search for flat keys and mechanical keys, should be able to make keybaords with either in the same way
