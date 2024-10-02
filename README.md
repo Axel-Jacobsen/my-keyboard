@@ -2,8 +2,6 @@
 
 split keyboard, fun to make and fun to have
 
-# Requirements
-
 microcontroller
 ===============
 - connection type
