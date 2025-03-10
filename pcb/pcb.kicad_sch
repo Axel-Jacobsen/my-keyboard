@@ -9197,7 +9197,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCCR"
+		(property "Value" "VCCL"
 			(at 278.13 152.4 0)
 			(effects
 				(font
