@@ -12,7 +12,7 @@ microcontroller
     - pros: clean to use
     - cons: battery is annoying
   - *decision*
-    - wired to start - bluetooth will make the project more complicated than necessary
+    - wired to start[0] - bluetooth will make the project more complicated than necessary
 - possible options
   - ATmega32U4 (widely used, looks small)
     - as raw IC mounted on the PCB (more complicated, so don't do) or as a "hat" on a breakout board
@@ -89,3 +89,6 @@ keys + key caps
     - cons: less cool?
   - *decision*
     - search for flat keys and mechanical keys, should be able to make keybaords with either in the same way
+
+
+[0]: [usb c breakout](https://tinyurl.com/269dkzz5) or [this full breakout](https://www.adafruit.com/product/4396#description)
