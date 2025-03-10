@@ -17,6 +17,7 @@ microcontroller
   - ATmega32U4 (widely used, looks small)
     - as raw IC mounted on the PCB (more complicated, so don't do) or as a "hat" on a breakout board
       - https://www.microchip.com/en-us/product/atmega32u4
+      - https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro
   - STM32F103 (powerful, bigger)
 - microcontroller -> pcb - how to connect?
   - solder directly to pcb
@@ -69,15 +70,16 @@ keys + key caps
     - 1 for ;
     - 1 for '
     - 1 for delete
-    - 2 for < and >
+    - 2 for <>
     - 2 for []
     - 1 for ?
     - 1 for \
     - 4 for arrow keys
     - 1 for special key 1
-  - with antoher 5,
+  - with another 5,
     - 1 for split spacebar
     - 1 for another special key
+    - ??? three fun extra keys
 - key type
   - mechanical keys
     - pros: maybe sounds good
