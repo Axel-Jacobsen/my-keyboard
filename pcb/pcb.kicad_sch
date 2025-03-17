@@ -10762,7 +10762,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 355.6 166.878 90)
 			(show_name yes)
 			(effects
@@ -10977,7 +10977,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 390.8552 96.52 0)
 			(effects
 				(font
@@ -11892,7 +11892,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Plug_Molex_105444"
 			(at 300.99 176.53 0)
 			(effects
 				(font
@@ -12643,7 +12643,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 390.8552 187.96 0)
 			(effects
 				(font
@@ -13421,7 +13421,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 375.6152 161.29 0)
 			(effects
 				(font
@@ -14421,7 +14421,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 375.6152 187.96 0)
 			(effects
 				(font
@@ -16204,7 +16204,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 355.6 179.578 90)
 			(effects
 				(font
@@ -18157,7 +18157,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 390.8552 161.29 0)
 			(effects
 				(font
@@ -18225,7 +18225,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Plug_JAE_DX07P024AJ1"
 			(at 261.62 176.53 0)
 			(effects
 				(font
@@ -18751,7 +18751,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 355.6 174.498 90)
 			(effects
 				(font
@@ -19107,7 +19107,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Plug_Molex_105444"
 			(at 340.36 175.26 0)
 			(effects
 				(font
