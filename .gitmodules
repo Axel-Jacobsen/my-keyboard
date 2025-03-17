@@ -1,3 +1,6 @@
 [submodule "key-switches.pretty"]
 	path = key-switches.pretty
 	url = https://github.com/siderakb/key-switches.pretty.git
+[submodule "kicad-lib-arduino"]
+	path = kicad-lib-arduino
+	url = git@github.com:g200kg/kicad-lib-arduino.git
