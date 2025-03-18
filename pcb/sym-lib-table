@@ -1,4 +1,4 @@
 (sym_lib_table
   (version 7)
-  (lib (name "promicro")(type "Legacy")(uri "/Users/axeljacobsen/Documents/my_keyboard/ProMicroKiCad/promicro_library/promicro.lib")(options "")(descr ""))
+  (lib (name "RP2040")(type "KiCad")(uri "/Users/axeljacobsen/Documents/my_keyboard/rp2040-kicad/RP2040-ZERO.kicad_sym")(options "")(descr ""))
 )
