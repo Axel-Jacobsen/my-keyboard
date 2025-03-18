@@ -4,3 +4,6 @@
 [submodule "kicad-lib-arduino"]
 	path = kicad-lib-arduino
 	url = git@github.com:g200kg/kicad-lib-arduino.git
+[submodule "ProMicroKiCad"]
+	path = ProMicroKiCad
+	url = git@github.com:Biacco42/ProMicroKiCad.git
