@@ -9231,7 +9231,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
+		(property "Value" "GNDPWRR"
 			(at 374.523 69.85 0)
 			(effects
 				(font
@@ -10227,7 +10227,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
+		(property "Value" "GNDPWRL"
 			(at 304.673 67.31 0)
 			(effects
 				(font
@@ -11209,6 +11209,107 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:USB_C_Plug_USB2.0")
+		(at 304.8 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54250f1f-4485-43c3-b76b-39c56a72d792")
+		(property "Reference" "P2"
+			(at 304.8 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R to L"
+			(at 304.8 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_USB:USB_C_Plug_JAE_DX07P024AJ1"
+			(at 308.61 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(at 308.61 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "USB 2.0-only Type-C Plug connector"
+			(at 304.8 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A1"
+			(uuid "7fa623bc-857a-4cbb-8791-eb5130f975ed")
+		)
+		(pin "A12"
+			(uuid "b167b3b2-98cd-4ff8-93ea-d7ce6dd7cf20")
+		)
+		(pin "A6"
+			(uuid "a679f80b-ec55-401c-a9e3-d5e254989065")
+		)
+		(pin "A7"
+			(uuid "a97dd9e2-4e75-4db3-a350-04780bb4917d")
+		)
+		(pin "A9"
+			(uuid "4ca17016-ea90-4cfa-b2ed-b77723ddaa3c")
+		)
+		(pin "B1"
+			(uuid "3098dc92-979c-4a60-ab05-2999cb9f7e1c")
+		)
+		(pin "B12"
+			(uuid "baa9277d-da57-47bd-9664-100049561184")
+		)
+		(pin "B4"
+			(uuid "71505f54-a07f-4ca1-b7f9-21b47ae9719b")
+		)
+		(pin "B5"
+			(uuid "58e05231-3e26-48ab-98f7-43bf64564639")
+		)
+		(pin "B9"
+			(uuid "c73321fe-aba0-4b82-903c-9178f3d28fc2")
+		)
+		(pin "S1"
+			(uuid "3f3a5476-2628-48b2-a9a7-acdef2566464")
+		)
+		(pin "A5"
+			(uuid "3f040ccc-038c-4440-876a-1c7c6651b44f")
+		)
+		(pin "A4"
+			(uuid "6a911fb8-d0a1-4c82-8f6d-889ff8c06593")
+		)
+		(instances
+			(project "pcb"
+				(path "/bd59a313-a6de-4d3b-8b64-7b9522a3d186"
+					(reference "P2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N5817")
 		(at 152.4 36.83 90)
 		(unit 1)
@@ -11275,107 +11376,6 @@
 			(project "pcb"
 				(path "/bd59a313-a6de-4d3b-8b64-7b9522a3d186"
 					(reference "D30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:USB_C_Plug_USB2.0")
-		(at 304.8 110.49 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a674ddf-3e15-4c11-9fec-a6d64c80946b")
-		(property "Reference" "P3"
-			(at 304.8 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R to L"
-			(at 304.8 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_USB:USB_C_Plug_Molex_105444"
-			(at 308.61 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
-			(at 308.61 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "USB 2.0-only Type-C Plug connector"
-			(at 304.8 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "A1"
-			(uuid "e42b7ed1-0157-44b8-804d-fc52768e5922")
-		)
-		(pin "B5"
-			(uuid "0791c5a1-2355-41bf-add8-47968635de51")
-		)
-		(pin "B4"
-			(uuid "a088a558-f31e-4c8e-a1bc-3322094f7cf8")
-		)
-		(pin "B1"
-			(uuid "ab24c01b-1879-4a47-9caa-32cb382532dd")
-		)
-		(pin "A4"
-			(uuid "ce9cafd8-5430-479d-8d72-336985f57137")
-		)
-		(pin "A7"
-			(uuid "3bbf7f5d-3f7c-46b8-a12f-794c31ad8fe0")
-		)
-		(pin "A9"
-			(uuid "cd5c4483-325d-47d0-84d9-3d4ea55f1274")
-		)
-		(pin "A12"
-			(uuid "8d7d155e-c393-467d-87f8-3bfe12aa16c9")
-		)
-		(pin "A5"
-			(uuid "2972a04d-1f57-4d38-b350-b922e161bdb7")
-		)
-		(pin "S1"
-			(uuid "97e81d90-83d6-45f4-aa20-e6a1d739152d")
-		)
-		(pin "B12"
-			(uuid "432f8675-a4f6-4888-a0d2-97178846fd43")
-		)
-		(pin "A6"
-			(uuid "6888c052-1366-407b-928a-b50b4090fd2c")
-		)
-		(pin "B9"
-			(uuid "5283034c-b5ac-4d3d-8280-3eb5bbba5d54")
-		)
-		(instances
-			(project "pcb"
-				(path "/bd59a313-a6de-4d3b-8b64-7b9522a3d186"
-					(reference "P3")
 					(unit 1)
 				)
 			)
@@ -12616,7 +12616,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWRR"
+		(property "Value" "GNDPWRL"
 			(at 265.303 137.16 0)
 			(effects
 				(font
