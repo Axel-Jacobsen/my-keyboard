@@ -1992,7 +1992,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "165ba2c8-a3a5-432b-b63f-21b03ea8609f")
-		(at 505.46 106.68)
+		(at 409.819 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW55"
@@ -2528,7 +2528,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "1a7fe529-5547-480f-bca3-ad205c677674")
-		(at 448.31 106.68)
+		(at 449.739 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW47"
@@ -3826,7 +3826,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "2d799e07-a5a4-4bcc-a9a8-85a918eee5cb")
-		(at 426.259 256.019)
+		(at 469.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW46"
@@ -9030,7 +9030,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "4d5abd3e-db38-4f6b-b48a-cd3da0820f36")
-		(at 426.259 192.494)
+		(at 469.739 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW45"
@@ -11136,7 +11136,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "56db360d-73ae-404f-a6e0-6767f1e97eae")
-		(at 511.259 192.494)
+		(at 409.739 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW57"
@@ -11299,7 +11299,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "5741096a-9fa4-4dbc-8fec-0b63750ffe2e")
-		(at 541.259 192.494)
+		(at 389.659 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW63"
@@ -11462,7 +11462,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "57ad1960-fcb4-49cb-873d-c40b733b0a1f")
-		(at 329.946 153.162)
+		(at 529.739 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW18"
@@ -11625,7 +11625,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "57b9778f-a912-4440-a1b9-727da98ca4ca")
-		(at 349.885 132.842)
+		(at 509.659 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW36"
@@ -13505,7 +13505,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "6678d7ca-a123-4a15-9ecf-583a79c82dbe")
-		(at 538.099 137.414)
+		(at 389.659 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW60"
@@ -15109,7 +15109,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "70e725fe-4171-4fee-a41a-3c899600f3b1")
-		(at 534.035 106.68)
+		(at 389.739 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW59"
@@ -16503,7 +16503,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "7764e5f3-6367-4356-af01-4de67dbefe24")
-		(at 541.179 256.019)
+		(at 389.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW64"
@@ -16666,7 +16666,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "788bf759-506f-4221-a75d-85b59b4cd68a")
-		(at 476.885 106.68)
+		(at 429.739 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW51"
@@ -16992,7 +16992,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "7e06b9c1-e7bf-4cd0-965f-afc314d235f3")
-		(at 371.179 255.519)
+		(at 509.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW38"
@@ -17155,7 +17155,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "7e1a850e-eee0-494f-a497-1e228d8c0cff")
-		(at 395.224 137.414)
+		(at 489.659 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW40"
@@ -18356,7 +18356,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "8aa117af-8314-476b-8ad8-080d3d8ed0bf")
-		(at 329.946 133.096)
+		(at 529.659 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW12"
@@ -18519,7 +18519,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "901d0702-183b-4b3d-b041-acd54c26e010")
-		(at 419.735 106.68)
+		(at 469.739 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW43"
@@ -19720,7 +19720,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "9aef6fc0-4673-4b33-934e-c66b37e10f7e")
-		(at 371.179 192.494)
+		(at 509.739 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW37"
@@ -19883,7 +19883,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "9bacf7cc-d2a3-4de9-a8cc-02dd97fbbb75")
-		(at 349.885 112.776)
+		(at 509.819 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW30"
@@ -20046,7 +20046,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "9bcd669a-cd3d-467c-bdbc-840501a438d9")
-		(at 452.374 137.414)
+		(at 449.659 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW48"
@@ -20565,7 +20565,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "a1b2bf79-4e1f-4abf-9d3b-7030acc61f1f")
-		(at 486.259 256.019)
+		(at 429.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW54"
@@ -21440,7 +21440,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "a4a12981-4685-404d-b2ba-d4b8b479cc08")
-		(at 509.524 137.414)
+		(at 409.739 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW56"
@@ -23456,7 +23456,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "b3182ef5-5253-419c-b546-5b53a3a1fba4")
-		(at 329.819 113.03)
+		(at 529.819 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW6"
@@ -25273,7 +25273,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "bc02a2a6-61ed-42b4-a371-de5277e70a18")
-		(at 396.259 192.494)
+		(at 489.739 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW41"
@@ -25436,7 +25436,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "bc951b03-efb4-4b50-ab67-a936ceaa008b")
-		(at 456.259 192.494)
+		(at 449.659 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW49"
@@ -27023,7 +27023,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "c36f38ae-86ee-44ca-9e26-93952fd4a24b")
-		(at 456.179 256.019)
+		(at 449.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW50"
@@ -27186,7 +27186,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "c37d181c-30ab-44a4-a976-c24c70b370f0")
-		(at 329.946 173.482)
+		(at 529.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW24"
@@ -33422,7 +33422,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "e5abd48f-261d-4ad3-9726-b9a0c7589c5d")
-		(at 516.259 256.019)
+		(at 409.659 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW58"
@@ -33941,7 +33941,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "ea0ce317-94d5-4785-96a4-315812986b4b")
-		(at 369.951 112.776)
+		(at 489.739 77.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW39"
@@ -36210,7 +36210,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "f69eacf8-59e3-45fd-98ce-730764aadf42")
-		(at 401.339 256.019)
+		(at 489.739 137.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW42"
@@ -36729,7 +36729,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "fb10af92-3053-4d67-967c-859ba02df883")
-		(at 480.949 137.414)
+		(at 429.739 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW52"
@@ -36892,7 +36892,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "fb8573ac-2fcb-47e5-86c6-602613242744")
-		(at 481.179 192.494)
+		(at 429.659 117.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW53"
@@ -37055,7 +37055,7 @@
 	(footprint "Keyboard Footprints:SW_MX_THT_nSilk"
 		(layer "F.Cu")
 		(uuid "fba95d24-a5b2-4c8c-b93f-e2c1c8be018a")
-		(at 423.799 137.414)
+		(at 469.659 97.500)
 		(descr "Cherry MX style mechanical keyboard switch, through-hole soldering, single-sided mounting.")
 		(tags "switch")
 		(property "Reference" "SW44"
