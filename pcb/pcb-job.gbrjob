@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "8.0.2-1"
     },
-    "CreationDate": "2025-05-10T20:55:56-07:00"
+    "CreationDate": "2025-05-11T09:41:20-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -39,16 +39,6 @@
     {
       "Path": "pcb-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "pcb-F_Paste.gbr",
-      "FileFunction": "SolderPaste,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "pcb-B_Paste.gbr",
-      "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {

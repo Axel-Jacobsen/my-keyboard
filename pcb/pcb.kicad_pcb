@@ -7,6 +7,9 @@
 		(legacy_teardrops no)
 	)
 	(paper "A2")
+	(title_block
+		(title "Keyboard, Split")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(31 "B.Cu" signal)
@@ -81,7 +84,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(pcbplotparams
-			(layerselection 0x00010fc_ffffffff)
+			(layerselection 0x00010f0_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -94,7 +97,7 @@
 			(plotframeref no)
 			(viasonmask no)
 			(mode 1)
-			(useauxorigin no)
+			(useauxorigin yes)
 			(hpglpennumber 1)
 			(hpglpenspeed 20)
 			(hpglpendiameter 15.000000)
@@ -105,9 +108,9 @@
 			(dxfusepcbnewfont yes)
 			(psnegative no)
 			(psa4output no)
-			(plotreference yes)
-			(plotvalue yes)
-			(plotfptext yes)
+			(plotreference no)
+			(plotvalue no)
+			(plotfptext no)
 			(plotinvisibletext no)
 			(sketchpadsonfab no)
 			(subtractmaskfromsilk no)
@@ -115,7 +118,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "/Users/axeljacobsen/Documents/my_keyboard/pcb/gbr/")
 		)
 	)
 	(net 0 "")
@@ -2324,6 +2327,7 @@
 		(property "Reference" "C1"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "8114ec04-4e2f-478f-b873-c58a1878686d")
 			(effects
 				(font
@@ -3051,6 +3055,7 @@
 		(property "Reference" "U1"
 			(at -5.825 -14.135 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "fbecb753-dae9-43c5-9e77-a796ca612287")
 			(effects
 				(font
@@ -3995,6 +4000,7 @@
 		(property "Reference" "C4"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "da20c77b-96fe-445e-8fc6-9bb43e734a64")
 			(effects
 				(font
@@ -8385,8 +8391,9 @@
 		(descr "USB 2.0 Type C Receptacle, https://gct.co/Files/Drawings/USB4085.pdf")
 		(tags "USB Type-C Receptacle Through-hole Right angle")
 		(property "Reference" "P1"
-			(at 2.975 -1.8 180)
+			(at 2.9315 2.6534 180)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "fe9cce62-0006-498a-bda4-94698782e3a2")
 			(effects
 				(font
@@ -23961,6 +23968,7 @@
 		(property "Reference" "U2"
 			(at -5.825 -14.135 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7748d142-61bf-466e-a98b-e961d2010b3f")
 			(effects
 				(font
@@ -27337,6 +27345,7 @@
 		(property "Reference" "R1"
 			(at 0 -1.82 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4f9da86e-160c-4d52-859f-f5e24b2b8668")
 			(effects
 				(font
@@ -28422,6 +28431,7 @@
 		(property "Reference" "C2"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "508d4037-2a8c-4eeb-8c72-e23379aff96f")
 			(effects
 				(font
@@ -29700,6 +29710,7 @@
 		(property "Reference" "R2"
 			(at 0 -1.82 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7e40be63-f386-43af-94c2-5371d4552144")
 			(effects
 				(font
