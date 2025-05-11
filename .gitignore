@@ -35,3 +35,6 @@ rp2040-kicad
 USB4085_GF_A
 pcb/mirror_diodes.py
 pcb/mirror_specific.py
+pcb/gbr
+pcb/gbr.zip
+.DS_Store
