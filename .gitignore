@@ -32,3 +32,6 @@ pcb/~pcb.kicad_sch.lck
 atmega16u4.pdf
 pcb/#auto_saved_files#
 rp2040-kicad
+USB4085_GF_A
+pcb/mirror_diodes.py
+pcb/mirror_specific.py

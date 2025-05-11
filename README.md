@@ -90,5 +90,6 @@ keys + key caps
   - *decision*
     - search for flat keys and mechanical keys, should be able to make keybaords with either in the same way
 
+[1]: https://www.digikey.com/en/products/detail/gct/USB4085-GF-A/9859662
 
 [0]: [usb c breakout](https://tinyurl.com/269dkzz5) or [this full breakout](https://www.adafruit.com/product/4396#description)
