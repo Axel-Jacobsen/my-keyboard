@@ -2,6 +2,12 @@
 
 split keyboard, fun to make and fun to have
 
+TODOs
+=====
+[ ] swap to low profile keys
+[ ] expose scl, sda
+[ ] tighten up PCB
+
 microcontroller
 ===============
 - connection type
