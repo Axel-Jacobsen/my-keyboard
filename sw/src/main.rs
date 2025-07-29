@@ -10,6 +10,7 @@ use embassy_rp::bind_interrupts;
 use embassy_rp::gpio::{Input, Level, Output, Pull};
 use embassy_rp::peripherals::USB;
 use embassy_rp::usb::{Driver, InterruptHandler};
+use embassy_time::{Duration, Timer};
 use embassy_usb::class::hid::{HidReaderWriter, ReportId, RequestHandler, State};
 use embassy_usb::control::OutResponse;
 use embassy_usb::{Builder, Config, Handler};
@@ -66,7 +67,7 @@ async fn main(_spawner: Spawner) {
     let config = embassy_usb::class::hid::Config {
         report_descriptor: KeyboardReport::desc(),
         request_handler: None,
-        poll_ms: 60,
+        poll_ms: 10,
         max_packet_size: 64,
     };
     let hid = HidReaderWriter::<_, 1, 8>::new(&mut builder, &mut state, config);
@@ -82,35 +83,27 @@ async fn main(_spawner: Spawner) {
     let _row_pin = Output::new(p.PIN_15, Level::High);
 
     // Enable the schmitt trigger to slightly debounce.
-    signal_pin.set_schmitt(true);
+    signal_pin.set_schmitt(false);
 
     let (reader, mut writer) = hid.split();
 
     // Do stuff with the class!
     let in_fut = async {
         loop {
-            info!("Waiting for HIGH on pin 16");
-            signal_pin.wait_for_high().await;
-            info!("HIGH DETECTED");
-            // Create a report with the A key pressed. (no shift modifier)
-            let report = KeyboardReport {
-                keycodes: [4, 0, 0, 0, 0, 0],
-                leds: 0,
-                modifier: 0,
-                reserved: 0,
-            };
-            // Send the report.
-            match writer.write_serialize(&report).await {
-                Ok(()) => {}
-                Err(e) => warn!("Failed to send report: {:?}", e),
-            };
-            signal_pin.wait_for_low().await;
-            info!("LOW DETECTED");
-            let report = KeyboardReport {
-                keycodes: [0, 0, 0, 0, 0, 0],
-                leds: 0,
-                modifier: 0,
-                reserved: 0,
+            Timer::after(Duration::from_secs(1)).await;
+            let report = match signal_pin.get_level() {
+                Level::Low => KeyboardReport {
+                    keycodes: [4, 0, 0, 0, 0, 0],
+                    leds: 0,
+                    modifier: 0,
+                    reserved: 0,
+                },
+                Level::High => KeyboardReport {
+                    keycodes: [5, 0, 0, 0, 0, 0],
+                    leds: 0,
+                    modifier: 0,
+                    reserved: 0,
+                },
             };
             match writer.write_serialize(&report).await {
                 Ok(()) => {}
