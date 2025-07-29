@@ -10,8 +10,10 @@ embassy-time = { version = "0.4.0", features = ["defmt", "defmt-timestamp-uptime
 embassy-executor = { version = "0.7.0", features = ["arch-cortex-m", "executor-thread", "executor-interrupt", "defmt"] }
 embassy-sync = { version = "0.7.0", features = ["defmt"] }
 embassy-futures = { version = "0.1.0" }
+embassy-usb = { version = "0.5.0", features = ["defmt"] }
 embassy-usb-logger = { version = "0.5.0" }
 
+critical-section = "1.1"
 defmt = "1.0.1"
 defmt-rtt = "1.0.0"
 fixed = "1.23.1"
@@ -19,9 +21,11 @@ fixed-macro = "1.2"
 serde = { version = "1.0.203", default-features = false, features = ["derive"] }
 serde-json-core = "0.5.1"
 
-cortex-m = { version = "0.7.6", features = ["inline-asm", "critical-section-single-core"] }
+cortex-m = { version = "0.7.6", features = ["inline-asm"] }
 cortex-m-rt = "0.7.0"
-panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+# panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+panic-probe = { version = "1.0.0" }
+# panic-probe = { version = "0.3.1", features = ["defmt"] }
 usbd-hid = "0.8.1"
 
 heapless = "0.8"
