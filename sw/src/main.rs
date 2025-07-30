@@ -81,17 +81,13 @@ async fn main(_spawner: Spawner) {
     };
 
     static LEFT_ROWS: StaticCell<[Output; 4]> = StaticCell::new();
-    static LEFT_COLS: StaticCell<[Input; 8]> = StaticCell::new();
-    static REPORT_CHANNEL: StaticCell<Channel<ThreadModeRawMutex, Key, 64>> = StaticCell::new();
-
-    let reporting_channel = REPORT_CHANNEL.init(Channel::new());
-
     let left_rows = LEFT_ROWS.init([
         Output::new(p.PIN_15, Level::Low),
         Output::new(p.PIN_14, Level::Low),
         Output::new(p.PIN_13, Level::Low),
         Output::new(p.PIN_12, Level::Low),
     ]);
+    static LEFT_COLS: StaticCell<[Input; 8]> = StaticCell::new();
     let left_cols = LEFT_COLS.init([
         Input::new(p.PIN_0, Pull::None),
         Input::new(p.PIN_1, Pull::None),
@@ -102,6 +98,9 @@ async fn main(_spawner: Spawner) {
         Input::new(p.PIN_6, Pull::None),
         Input::new(p.PIN_7, Pull::None),
     ]);
+
+    static REPORT_CHANNEL: StaticCell<Channel<ThreadModeRawMutex, Key, 64>> = StaticCell::new();
+    let reporting_channel = REPORT_CHANNEL.init(Channel::new());
 
     let left_matrix_fut =
         matrix::report(left_rows, left_cols, Side::Left, reporting_channel.sender());
