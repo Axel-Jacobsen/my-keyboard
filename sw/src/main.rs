@@ -4,15 +4,18 @@
 mod matrix;
 mod types;
 
+use crate::types::{Key, Side};
+
 use core::sync::atomic::{AtomicBool, Ordering};
 
 use embassy_executor::Spawner;
-use embassy_futures::join::join;
+use embassy_futures::join::join4;
 use embassy_rp::bind_interrupts;
 use embassy_rp::gpio::{Input, Level, Output, Pull};
 use embassy_rp::peripherals::USB;
 use embassy_rp::usb::{Driver, InterruptHandler};
-use embassy_time::{Duration, Timer};
+use embassy_sync::blocking_mutex::raw::ThreadModeRawMutex;
+use embassy_sync::channel::Channel;
 use embassy_usb::class::hid::{HidReaderWriter, ReportId, RequestHandler, State};
 use embassy_usb::control::OutResponse;
 use embassy_usb::{Builder, Config, Handler};
@@ -77,16 +80,35 @@ async fn main(_spawner: Spawner) {
         HidReaderWriter::<_, 1, 8>::new(&mut builder, state, config)
     };
 
-    let mut usb = builder.build();
-    let usb_fut = usb.run();
+    static LEFT_ROWS: StaticCell<[Output; 4]> = StaticCell::new();
+    static LEFT_COLS: StaticCell<[Input; 8]> = StaticCell::new();
+    static REPORT_CHANNEL: StaticCell<Channel<ThreadModeRawMutex, Key, 64>> = StaticCell::new();
 
-    let mut signal_pin = Input::new(p.PIN_7, Pull::None);
-    let _row_pin = Output::new(p.PIN_15, Level::High);
+    let reporting_channel = REPORT_CHANNEL.init(Channel::new());
 
-    signal_pin.set_schmitt(false);
+    let left_rows = LEFT_ROWS.init([
+        Output::new(p.PIN_15, Level::Low),
+        Output::new(p.PIN_14, Level::Low),
+        Output::new(p.PIN_13, Level::Low),
+        Output::new(p.PIN_12, Level::Low),
+    ]);
+    let left_cols = LEFT_COLS.init([
+        Input::new(p.PIN_0, Pull::None),
+        Input::new(p.PIN_1, Pull::None),
+        Input::new(p.PIN_2, Pull::None),
+        Input::new(p.PIN_3, Pull::None),
+        Input::new(p.PIN_4, Pull::None),
+        Input::new(p.PIN_5, Pull::None),
+        Input::new(p.PIN_6, Pull::None),
+        Input::new(p.PIN_7, Pull::None),
+    ]);
+
+    let left_matrix_fut =
+        matrix::report(left_rows, left_cols, Side::Left, reporting_channel.sender());
+
+    let key_receiver = reporting_channel.receiver();
 
     let (reader, mut writer) = hid.split();
-
     let in_fut = async {
         const RELEASE: KeyboardReport = KeyboardReport {
             keycodes: [0; 6],
@@ -96,14 +118,27 @@ async fn main(_spawner: Spawner) {
         };
 
         loop {
-            signal_pin.wait_for_rising_edge().await;
-            let press = KeyboardReport {
-                keycodes: [5, 0, 0, 0, 0, 0],
-                ..RELEASE
-            };
+            let key = key_receiver.receive().await;
 
-            let _ = writer.write_serialize(&press).await;
-            Timer::after(Duration::from_millis(1)).await;
+            // Send 'L' or 'R'
+            let _ = writer
+                .write(&[match key.side {
+                    Side::Left => b'L',
+                    Side::Right => b'R',
+                }])
+                .await;
+
+            // Send ASCII digits of row_id
+            let _ = writer.write(&[b'0' + (key.row_id / 10) as u8]).await;
+            let _ = writer.write(&[b'0' + (key.row_id % 10) as u8]).await;
+
+            // Send ASCII digits of col_id
+            let _ = writer.write(&[b'0' + (key.col_id / 10) as u8]).await;
+            let _ = writer.write(&[b'0' + (key.col_id % 10) as u8]).await;
+
+            // Optional: newline for readability
+            let _ = writer.write(&[b'\n']).await;
+
             let _ = writer.write_serialize(&RELEASE).await;
         }
     };
@@ -113,7 +148,10 @@ async fn main(_spawner: Spawner) {
         reader.run(false, &mut request_handler).await;
     };
 
-    join(usb_fut, join(in_fut, out_fut)).await;
+    let mut usb = builder.build();
+    let usb_fut = usb.run();
+
+    join4(left_matrix_fut, usb_fut, in_fut, out_fut).await;
 }
 
 struct MyRequestHandler {}
