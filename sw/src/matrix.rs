@@ -7,7 +7,7 @@ use embassy_time::{Duration, Timer};
 
 use crate::types::{Key, Side};
 
-const ROW_DELAY: Duration = Duration::from_hz(100);
+const ROW_DELAY: Duration = Duration::from_hz(10);
 
 pub async fn report(
     rows: &mut [Output<'_>; 4],
@@ -22,12 +22,13 @@ pub async fn report(
 
             for (col_id, col) in cols.iter().enumerate() {
                 if col.is_high() {
+                    log::debug!("col {} is high", col_id);
                     let key = Key {
                         side,
                         row_id,
                         col_id,
                     };
-                    let _ = reporter.send(key);
+                    reporter.send(key).await;
                 }
             }
 

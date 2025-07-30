@@ -9,13 +9,14 @@ use crate::types::{Key, Side};
 use core::sync::atomic::{AtomicBool, Ordering};
 
 use embassy_executor::Spawner;
-use embassy_futures::join::join4;
+use embassy_futures::join::join5;
 use embassy_rp::bind_interrupts;
 use embassy_rp::gpio::{Input, Level, Output, Pull};
 use embassy_rp::peripherals::USB;
 use embassy_rp::usb::{Driver, InterruptHandler};
 use embassy_sync::blocking_mutex::raw::ThreadModeRawMutex;
 use embassy_sync::channel::Channel;
+use embassy_usb::class::cdc_acm::{CdcAcmClass, State as CdcState};
 use embassy_usb::class::hid::{HidReaderWriter, ReportId, RequestHandler, State};
 use embassy_usb::control::OutResponse;
 use embassy_usb::{Builder, Config, Handler};
@@ -117,7 +118,9 @@ async fn main(_spawner: Spawner) {
         };
 
         loop {
+            log::debug!("waiting for key");
             let key = key_receiver.receive().await;
+            log::debug!("received key");
 
             // Send 'L' or 'R'
             let _ = writer
@@ -147,10 +150,14 @@ async fn main(_spawner: Spawner) {
         reader.run(false, &mut request_handler).await;
     };
 
+    static LOGGER_STATE: StaticCell<CdcState> = StaticCell::new();
+    let logger_class = CdcAcmClass::new(&mut builder, LOGGER_STATE.init(CdcState::new()), 64);
+    let log_fut = embassy_usb_logger::with_class!(1024, log::LevelFilter::Debug, logger_class);
+
     let mut usb = builder.build();
     let usb_fut = usb.run();
 
-    join4(left_matrix_fut, usb_fut, in_fut, out_fut).await;
+    join5(log_fut, left_matrix_fut, usb_fut, in_fut, out_fut).await;
 }
 
 struct MyRequestHandler {}
