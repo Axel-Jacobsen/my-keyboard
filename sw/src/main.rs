@@ -87,28 +87,32 @@ async fn main(_spawner: Spawner) {
 
     let (reader, mut writer) = hid.split();
 
-    // Do stuff with the class!
     let in_fut = async {
+        const RELEASE: KeyboardReport = KeyboardReport {
+            keycodes: [0; 6],
+            leds: 0,
+            modifier: 0,
+            reserved: 0,
+        };
+
         loop {
-            Timer::after(Duration::from_secs(1)).await;
-            let report = match signal_pin.get_level() {
+            Timer::after(Duration::from_millis(30)).await;
+
+            // choose which key to press
+            let press = match signal_pin.get_level() {
                 Level::Low => KeyboardReport {
                     keycodes: [4, 0, 0, 0, 0, 0],
-                    leds: 0,
-                    modifier: 0,
-                    reserved: 0,
+                    ..RELEASE
                 },
                 Level::High => KeyboardReport {
                     keycodes: [5, 0, 0, 0, 0, 0],
-                    leds: 0,
-                    modifier: 0,
-                    reserved: 0,
+                    ..RELEASE
                 },
             };
-            match writer.write_serialize(&report).await {
-                Ok(()) => {}
-                Err(e) => warn!("Failed to send report: {:?}", e),
-            };
+
+            let _ = writer.write_serialize(&press).await;
+            Timer::after(Duration::from_millis(1)).await;
+            let _ = writer.write_serialize(&RELEASE).await;
         }
     };
 
@@ -116,8 +120,6 @@ async fn main(_spawner: Spawner) {
         reader.run(false, &mut request_handler).await;
     };
 
-    // Run everything concurrently.
-    // If we had made everything `'static` above instead, we could do this using separate tasks instead.
     join(usb_fut, join(in_fut, out_fut)).await;
 }
 
