@@ -1,6 +1,9 @@
 #![no_std]
 #![no_main]
 
+mod matrix;
+mod types;
+
 use core::sync::atomic::{AtomicBool, Ordering};
 
 use embassy_executor::Spawner;
