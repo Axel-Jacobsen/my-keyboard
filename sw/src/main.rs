@@ -61,8 +61,6 @@ async fn main(_spawner: Spawner) {
         builder
     };
 
-    let mut request_handler = MyRequestHandler {};
-
     let config = embassy_usb::class::hid::Config {
         report_descriptor: KeyboardReport::desc(),
         request_handler: None,
@@ -77,7 +75,6 @@ async fn main(_spawner: Spawner) {
     };
 
     let mut usb = builder.build();
-
     let usb_fut = usb.run();
 
     let mut signal_pin = Input::new(p.PIN_7, Pull::None);
@@ -96,18 +93,10 @@ async fn main(_spawner: Spawner) {
         };
 
         loop {
-            Timer::after(Duration::from_millis(30)).await;
-
-            // choose which key to press
-            let press = match signal_pin.get_level() {
-                Level::Low => KeyboardReport {
-                    keycodes: [4, 0, 0, 0, 0, 0],
-                    ..RELEASE
-                },
-                Level::High => KeyboardReport {
-                    keycodes: [5, 0, 0, 0, 0, 0],
-                    ..RELEASE
-                },
+            signal_pin.wait_for_rising_edge().await;
+            let press = KeyboardReport {
+                keycodes: [5, 0, 0, 0, 0, 0],
+                ..RELEASE
             };
 
             let _ = writer.write_serialize(&press).await;
@@ -116,6 +105,7 @@ async fn main(_spawner: Spawner) {
         }
     };
 
+    let mut request_handler = MyRequestHandler {};
     let out_fut = async {
         reader.run(false, &mut request_handler).await;
     };
