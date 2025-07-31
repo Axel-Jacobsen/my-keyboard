@@ -63,8 +63,8 @@ async fn main(_spawner: Spawner) {
             CONTROL_BUF.init([0; 64]),
         );
 
-        static DEVICE_HANDLER: StaticCell<MyDeviceHandler> = StaticCell::new();
-        builder.handler(DEVICE_HANDLER.init(MyDeviceHandler::new()));
+        static DEVICE_HANDLER: StaticCell<StubDeviceHandler> = StaticCell::new();
+        builder.handler(DEVICE_HANDLER.init(StubDeviceHandler::new()));
         builder
     };
 
@@ -145,7 +145,7 @@ async fn main(_spawner: Spawner) {
         }
     };
 
-    let mut request_handler = MyRequestHandler {};
+    let mut request_handler = StubRequestHandler {};
     let out_fut = async {
         reader.run(false, &mut request_handler).await;
     };
@@ -160,9 +160,9 @@ async fn main(_spawner: Spawner) {
     join5(log_fut, left_matrix_fut, usb_fut, in_fut, out_fut).await;
 }
 
-struct MyRequestHandler {}
+struct StubRequestHandler {}
 
-impl RequestHandler for MyRequestHandler {
+impl RequestHandler for StubRequestHandler {
     fn get_report(&mut self, _id: ReportId, _buf: &mut [u8]) -> Option<usize> {
         None
     }
@@ -178,19 +178,19 @@ impl RequestHandler for MyRequestHandler {
     }
 }
 
-struct MyDeviceHandler {
+struct StubDeviceHandler {
     configured: AtomicBool,
 }
 
-impl MyDeviceHandler {
+impl StubDeviceHandler {
     fn new() -> Self {
-        MyDeviceHandler {
+        StubDeviceHandler {
             configured: AtomicBool::new(false),
         }
     }
 }
 
-impl Handler for MyDeviceHandler {
+impl Handler for StubDeviceHandler {
     fn enabled(&mut self, _enabled: bool) {
         self.configured.store(false, Ordering::Relaxed);
     }

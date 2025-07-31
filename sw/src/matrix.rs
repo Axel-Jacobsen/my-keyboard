@@ -22,7 +22,6 @@ pub async fn report(
 
             for (col_id, col) in cols.iter().enumerate() {
                 if col.is_high() {
-                    log::debug!("col {} is high", col_id);
                     let key = Key {
                         side,
                         row_id,
