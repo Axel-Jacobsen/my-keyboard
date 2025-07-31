@@ -13,7 +13,7 @@ pub async fn report(
     rows: &mut [Output<'_>; 4],
     cols: &mut [Input<'_>; 8],
     side: Side,
-    reporter: Sender<'static, ThreadModeRawMutex, Key, 64>,
+    reporter: Sender<'static, ThreadModeRawMutex, Key, 256>,
 ) {
     loop {
         for (row_id, row) in rows.iter_mut().enumerate() {

@@ -100,7 +100,7 @@ async fn main(_spawner: Spawner) {
         Input::new(p.PIN_7, Pull::None),
     ]);
 
-    static REPORT_CHANNEL: StaticCell<Channel<ThreadModeRawMutex, Key, 64>> = StaticCell::new();
+    static REPORT_CHANNEL: StaticCell<Channel<ThreadModeRawMutex, Key, 256>> = StaticCell::new();
     let reporting_channel = REPORT_CHANNEL.init(Channel::new());
 
     let left_matrix_fut =
@@ -120,7 +120,7 @@ async fn main(_spawner: Spawner) {
         loop {
             log::debug!("waiting for key");
             let key = key_receiver.receive().await;
-            log::debug!("received key");
+            log::debug!("received key: {:?}", key);
 
             // Send 'L' or 'R'
             let _ = writer
