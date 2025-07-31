@@ -7,7 +7,7 @@ use embassy_time::{Duration, Timer};
 
 use crate::types::{Key, Side};
 
-const ROW_DELAY: Duration = Duration::from_hz(10);
+const ROW_DELAY: Duration = Duration::from_hz(1000);
 
 pub async fn report(
     rows: &mut [Output<'_>; 4],
